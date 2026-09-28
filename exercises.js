@@ -39,7 +39,9 @@ function exercise_01() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const numbers = [1, 2, 3, 4, 5];
+  console.log(numbers);
+  console.log(numbers.length);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -57,7 +59,9 @@ function exercise_02() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const numbers = [1, 2, 3, 4, 5];
+  console.log(numbers[0]);
+  console.log(numbers[numbers.length - 1]);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -76,7 +80,13 @@ function exercise_03() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const numbers = [];
+  numbers.push(1);
+  numbers.push(2);
+  numbers.push(3);
+  numbers.push(4);
+  numbers.push(5);
+  console.log(numbers);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -95,7 +105,9 @@ function exercise_04() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const strings = ["a", "b", "c", "d", "e"];
+  strings.unshift("z");
+  console.log(strings);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -115,7 +127,10 @@ function exercise_05() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const strings = ["a", "b", "c", "d", "e"];
+  const removedItem = strings.pop();
+  console.log(removedItem);
+  console.log(strings);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -134,7 +149,11 @@ function exercise_06() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const numbers = [1, 2, 3, 4, 5];
+  const removedItem = numbers.shift();
+  console.log(removedItem);
+  console.log(numbers);
+  
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -152,7 +171,12 @@ function exercise_07() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  if (numbers.includes(7)) {
+    console.log("Item is in the array!");
+  } else {
+    console.log("Item not present in the array");
+  }
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -177,7 +201,10 @@ function exercise_08() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const index = numbers.indexOf(4);
+  console.log(numbers[index - 1]);
+  console.log(numbers[index + 1]);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -196,7 +223,9 @@ function exercise_09() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  numbers.splice(1, 1);
+  console.log(numbers);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -224,7 +253,18 @@ function exercise_10() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const personMap = new Map();
+  personMap.set("name", "John");
+  personMap.set("age", 30);
+  personMap.set("job", "Engineer");
+  console.log(personMap);
+
+  const personObject = {
+    name: "John",
+    age: 30,
+    job: "Engineer"
+  };
+  console.log(personObject);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -256,7 +296,13 @@ function exercise_11() {
    - The second element, the value of that key
   */
 
-  const placeholder = "Delete this line and code in this space";
+  const personMap = new Map([
+    ["name", "John"],
+    ["age", 30],
+    ["job", "Engineer"]
+  ]);
+  const nameValue = personMap.get("name");
+  console.log(`This person's name is ${nameValue}`);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -278,7 +324,17 @@ function exercise_12() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const personMap = new Map([
+    ["name", "John"],
+    ["age", 30],
+    ["job", "Engineer"]
+  ]);
+  console.log(personMap);
+  console.log(personMap.size);
+
+  personMap.delete("age");
+  console.log(personMap);
+  console.log(personMap.size);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -313,7 +369,32 @@ function exercise_13() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const personSet = new Set([1, 2, 3]);
+  console.log(personSet);
+  console.log(personSet.size);
+
+  personSet.add(4);
+  personSet.add(5);
+  personSet.add(6);
+  console.log(personSet);
+  console.log(personSet.size);
+
+  personSet.add(3);
+  console.log(personSet);
+  console.log(personSet.size);
+
+  const hasAllThree = personSet.has(1) && personSet.has(2) && personSet.has(3);
+  if (hasAllThree) {
+    console.log("Has all three");
+  } else {
+    console.log("Does not contain all three");
+  }
+
+  personSet.delete(1);
+  personSet.delete(2);
+  personSet.delete(3);
+  console.log(personSet);
+  console.log(personSet.size);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -330,7 +411,11 @@ function exercise_14() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let number = 1;
+  while (number <= 5) {
+    console.log(number);
+    number++;
+  } 
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -350,7 +435,13 @@ function exercise_15() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let number = 28;
+  do {
+    if (number % 7 === 0 || number % 4 === 0) {
+      console.log(number);
+    }
+    number--;
+  } while (number >= 1);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -371,7 +462,16 @@ function exercise_16() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const number = 1;
+  for (let i = number; i <= 10; i++) {
+    if (i % 2 !== 0) {
+      continue;
+    }
+    if (i === 8) {
+      break;
+    }
+    console.log(i);
+  }
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -496,7 +596,52 @@ function exercise_17() {
   */
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  const itemNames =[];
+  const itemTypes = new Set();
+  const sumPricePerType = {};
+  let totalSum = 0;
+  // Part 1
+  for (let i = 1; i < checkoutItems.length; i++) {
+    itemNames.push(checkoutItems[i].item);
+    itemTypes.add(checkoutItems[i].type);
+  const type = checkoutItems[i].type;
+  const price = checkoutItems[i].price;
+
+  if (sumPricePerType[type]) {
+    sumPricePerType[type] = Math.round((sumPricePerType[type] + price) * 100) / 100;
+  } else {
+    sumPricePerType[type] = Math.round(price * 100) / 100;
+  }
+}
+  console.log("Items in Checkout Cart");
+  for (const itemName of itemNames){
+    console.log(itemName);
+  }
+  console.log("--------");
+  // Part 2
+  console.log("Unique Item Types");
+  for (const itemType of itemTypes){
+    console.log(itemType);
+  }
+  console.log("--------");
+
+  // Part 3
+  console.log("Total sum for each type");
+  for (const type in sumPricePerType) {
+    console.log(`${type}: $${sumPricePerType[type]}`);
+  }
+  console.log("--------");
+
+  // Part 4
+  console.log("Total sum for items purchased");
+  for (const type in sumPricePerType) {
+    totalSum += sumPricePerType[type];
+  }
+  console.log(`Total Sum: $${totalSum}`);
+  console.log("--------");
+
+  const usdFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+  console.log(`Total Sum in USD: ${usdFormatter.format(totalSum)}`);
 
   // CODE IN THE OPEN LINES ABOVE
 }
